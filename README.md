@@ -12,11 +12,29 @@ Screenshots
 
 We all know how much we like eye candy.
 ![Screenshot of Main Software Interface](README.d/main-interface.png "Main Interface when Starting")
+The main interface to QuteSerial
 
 ![Screenshot of Main Interface in Hex View](README.d/main-hexview.png "QuteSerial can display Tx/Rx'd data in Hex")
+QuteSerial can display Tx and Rx data as either Hex or ASCII.  This is the Hex View
 
 ![Screenshot of Main Interface in ASCII View](README.d/main-asciiview.png "... or ASCII")
+This is the standard ASCII
 
 ![Macro Window](README.d/macro-example.png "Main Macro Window. Notice the ability to send binary strings")
+You can setup macros (in either escaped binary, or common escape sequences) that allow you to press F1-F11 to send them.  TODOs include the ability to remap these shortcuts
 
 
+Requirements
+=============
+
+- Built on the Qt5 framework
+  - QtSerialPort is core of serial IO
+- Works on Windows and Linux (funtoo/gentoo).  Should work on OSX, but I dont have a OS X machine with RS232 ports
+
+TODO
+====
+
+- Integrate a javascript interface
+- Allow remapping of F1-F11 to whatever a user desires
+- Configured to better work on Mac?
+- Create icons
