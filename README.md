@@ -38,3 +38,12 @@ TODO
 - Allow remapping of F1-F11 to whatever a user desires
 - Configured to better work on Mac?
 - Create icons
+
+
+Building
+========
+
+- retrieve sources via `git clone git@github.com:npotts/QuteSerial.git`
+- cd to QuteSerial and run `qmake`
+- run `make` or `mingw32-make` if on windows
+- output binary will be located in `bin/QuteSerial`
