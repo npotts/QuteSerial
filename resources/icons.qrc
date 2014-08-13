@@ -12,5 +12,7 @@
     <file>clear.png</file>
     <file>red.png</file>
     <file>green.png</file>
+    <file>qute-serial.png</file>
+    <file>qute-serial.svg</file>
   </qresource>
 </RCC>
