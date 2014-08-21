@@ -1,0 +1,9 @@
+#!/usr/bin/env xdg-open
+
+[Desktop Entry]
+Exec=/usr/bin/QuteSerial
+Icon=/usr/share/pixmaps/qute-serial.png
+Categories=Development
+Type=Application
+GenericName=A Qt5 based serial port terminal
+Comment[en_US]=A Qt5 based serial port terminal
