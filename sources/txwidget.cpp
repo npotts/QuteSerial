@@ -42,8 +42,6 @@ QuteTxWidget::QuteTxWidget(QWidget * parent, Qt::WindowFlags f) : QWidget(parent
   //setup eventFilter so we can capture keypresses over txascii
   txascii->installEventFilter(this);
   gridLayout_3->addWidget(&hex, 0, 0, 1, 1);
-  for(int i=0; i<5; i++)
-    dataTxd(QByteArray("Test"));
 }
 bool QuteTxWidget::eventFilter(QObject *src, QEvent *ev) {
   if ((src == txascii) && (ev->type() == QEvent::KeyPress)) {
