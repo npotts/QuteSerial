@@ -32,7 +32,7 @@
 
 #include <QtCore>
 #include <QtWidgets>
-#include <QHexView>
+#include "QHexView"
 #include "ui_rxwidget.h"
 
 class QuteRxWidget: public QWidget, public Ui::rxwidget {

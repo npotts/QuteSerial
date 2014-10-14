@@ -33,7 +33,7 @@
 
 #include <QtCore>
 #include <QtWidgets>
-#include <QHexView>
+#include "QHexView"
 #include "ui_txwidget.h"
 
 class QuteTxWidget: public QWidget, public Ui::txwidget {
