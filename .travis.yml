@@ -6,16 +6,15 @@ compiler:
 install:
   - sudo apt-get update -q
   - sudo apt-get install build-essential
-  - cd /opt
-  - sudo wget https://github.com/npotts/Qt5-Travis-CI/raw/master/Qt5.txz
-  - sudo tar xf Qt5.txz
+  - cd ~
+  - wget https://github.com/npotts/Qt5-Travis-CI/raw/master/Qt5.txz
+  - tar xf Qt5.txz
 
 script:
-  - ls /opt/
-  - ls /opt/*
-  - ls /opt/Qt5.3.2/*
-  - ls /opt/Qt5.3.2/bin/*
-  - /opt/Qt5.3.2/bin/qmake
+  - ls ~/Qt5.3.2/*
+  - ls ~/Qt5.3.2/bin/*
+  - ls ~/Qt5.3.2/bin/qmake
+  - ~/Qt5.3.2/bin/qmake
   - make -j$(nproc)
 
 
