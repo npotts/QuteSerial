@@ -1,26 +1,41 @@
 language: cpp
-os:
-  - osx
-  - linux
 compiler:
   - gcc
-before_install: ./CI/travis.before_install.sh
-install: ./CI/travis.install.sh
-before_script:
-  - if [ "${TRAVIS_OS_NAME}" = "osx" ]; then PATH="/usr/local/opt/qt5/bin:$PATH"; fi
+  - clang
+
+before_install:
+  - cd ~
+  - wget https://github.com/npotts/Qt5-Travis-CI/raw/master/Qt5.txz
+  - tar xfp Qt5.txz
+
+install:
+  - sudo apt-get update -q
+  - sudo apt-get install build-essential
+
 script:
-  - ls /usr/bin/*qmake*
-  - ls /usr/local/bin/*qmake*
-  - ls /usr/lib/qt5/bin/*qmake*
-  - ls /usr/lib/qt5/*
+  - export PATH="${HOME}/Qt5.3.2/bin:${PATH}"
   - which qmake
-  - qmake-qt5 --version
-  - qmake-qt5
-  - make -j2
-notifications:
-  webhooks:
-    urls:
-      - https://webhooks.gitter.im/e/4ed233d9013d611a1568
-    on_success: always  # options: [always|never|change] default: always
-    on_failure: always  # options: [always|never|change] default: always
-    on_start: false     # default: false
+  - qmake --version
+  - ${HOME}/Qt5.3.2/bin/qmake --version
+  - pwd
+  - ls *
+  - ls build
+  - ls builds
+  - ls -alh ~/Qt5.3.2/bin/qmake
+  - make -j$(nproc)
+
+
+
+#language: cpp
+#os:
+#  - osx
+#  - linux
+#compiler:
+#  - gcc
+#before_install: ./CI/travis.before_install.sh
+#install: ./CI/travis.install.sh
+#before_script:
+#  - if [ "${TRAVIS_OS_NAME}" = "osx" ]; then PATH="/usr/local/opt/qt5/bin:$PATH"; fi
+#script:
+# - qmake-qt5
+#  - make -j2
