@@ -14,8 +14,8 @@ script:
   - ls /usr/lib/qt5/bin/*qmake*
   - ls /usr/lib/qt5/*
   - which qmake
-  - qmake --version
-  - qmake
+  - qmake-qt5 --version
+  - qmake-qt5
   - make -j2
 notifications:
   webhooks:
