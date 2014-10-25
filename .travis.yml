@@ -9,7 +9,9 @@ install: ./CI/travis.install.sh
 before_script:
   - if [ "${TRAVIS_OS_NAME}" = "osx" ]; then PATH="/usr/local/opt/qt5/bin:$PATH"; fi
 script:
-  - qmake5 
+  - which qmake
+  - qmake --version
+  - qmake
   - make -j2
 notifications:
   webhooks:
