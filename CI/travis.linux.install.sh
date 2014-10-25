@@ -3,7 +3,7 @@
 set -ev
 sudo apt-get install \
   build-essential \
-  qt5-default qtmultimedia5-dev qttools5-dev qt5-serialport qt5-widgets qt5-gui\
+  qt5-default qtmultimedia5-dev qttools5-dev libqt5widgets5 libqt5serialport5\
   gcc-4.7 \
   g++-4.7
 sudo update-alternatives --remove gcc /usr/bin/gcc-4.6
