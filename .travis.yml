@@ -17,7 +17,7 @@ script:
   - qmake --version
   - pwd
   - ls *
-  - ls -alh Qt5.3.2/*
+  - ls -alh ${HOME}/Qt5.3.2/*
   - ${HOME}/Qt5.3.2/bin/qmake
   - make -j$(nproc)
 
