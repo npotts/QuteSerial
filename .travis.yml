@@ -10,8 +10,7 @@ before_install:
   - sudo apt-get update
   - sudo apt-get install qt5-default qt5-qmake qtbase5-dev-tools qtchooser qttools5-dev qtbase5-dev libgles2-mesa-dev libqt5gui5 libqt5serialport5-dev libqt5printsupport5 libqt5widgets5 libgles2-mesa libgl1-mesa-dev libgl1-mesa-glx libglapi-mesa libegl1-mesa-dev libpango-1.0-0
   - sudo apt-get install zlib1g-dev libudev-dev
-  #- wget https://github.com/npotts/Qt5-Travis-CI/raw/master/Qt5.txz
-  #- tar xfp Qt5.txz -C ${HOME}
+
 
 install:
   - sudo apt-get update -q
@@ -20,18 +19,3 @@ install:
 script:
   - qmake
   - make -j$(nproc)
-
-
-#language: cpp
-#os:
-#  - osx
-#  - linux
-#compiler:
-#  - gcc
-#before_install: ./CI/travis.before_install.sh
-#install: ./CI/travis.install.sh
-#before_script:
-#  - if [ "${TRAVIS_OS_NAME}" = "osx" ]; then PATH="/usr/local/opt/qt5/bin:$PATH"; fi
-#script:
-# - qmake-qt5
-#  - make -j2

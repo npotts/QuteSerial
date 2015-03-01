@@ -1,4 +1,4 @@
-QuteSerial
+QuteSerial [![Build Status](https://travis-ci.org/npotts/QuteSerial.svg?branch=master)](https://travis-ci.org/npotts/QuteSerial)
 ==========
 
 QuteSerial is a RS232 terminal in the veins of minicom, hyperterminal,
@@ -47,5 +47,3 @@ Building
 - cd to QuteSerial and run `qmake`
 - run `make` or `mingw32-make` if on windows
 - output binary will be located in `bin/QuteSerial`
-
-[![Build Status](https://travis-ci.org/npotts/QuteSerial.svg?branch=master)](https://travis-ci.org/npotts/QuteSerial)
