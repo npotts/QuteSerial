@@ -61,10 +61,10 @@ HEADERS += sources/qhexview.h   \
            sources/macros.h     \
            sources/quteserial.h
            
-FORMS +=   ui/macros.ui     \
-           ui/quteserial.ui \
-           ui/rxwidget.ui   \
-           ui/txwidget.ui
+FORMS +=   sources/macros.ui     \
+           sources/quteserial.ui \
+           sources/rxwidget.ui   \
+           sources/txwidget.ui
 
 RESOURCES += resources/icons.qrc
 
